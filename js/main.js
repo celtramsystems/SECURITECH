@@ -110,3 +110,11 @@
     
 })(jQuery);
 
+function closeWidget(event) {
+    event.preventDefault(); // Evita que el enlace haga scroll
+    event.stopPropagation(); // Evita que el clic active el botón de "Estimate"
+    
+    const widget = document.getElementById('estimate-widget');
+    widget.style.display = 'none';
+}
+
